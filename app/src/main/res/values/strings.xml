@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MadLib</string>
+    <string name="storyP">Choose story</string>
+
+    <string-array name="story_array">
+        <item>Story 1</item>
+        <item>Story 2</item>
+        <item>Story 3</item>
+    </string-array>
+
 </resources>

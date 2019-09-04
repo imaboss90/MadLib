@@ -16,10 +16,12 @@ public class InfoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.myTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        setTheme();
+        //setTheme();
+
 
         Intent intent = getIntent();
         String myName = intent.getStringExtra(MY_NAME);

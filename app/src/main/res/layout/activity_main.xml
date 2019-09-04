@@ -14,10 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:text="Noun:"
-        android:textSize="@dimen/textSize"
         android:textColor="@color/fontColor"
+        android:textSize="@dimen/textSize"
         app:layout_constraintBottom_toBottomOf="@+id/editNoun"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.069"
@@ -29,10 +29,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:text="Adjective:"
-        android:textSize="@dimen/textSize"
         android:textColor="@color/fontColor"
+        android:textSize="@dimen/textSize"
         app:layout_constraintBottom_toBottomOf="@+id/editAdjective"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.083"
@@ -44,10 +44,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:text="Name:"
-        android:textSize="@dimen/textSize"
         android:textColor="@color/fontColor"
+        android:textSize="@dimen/textSize"
         app:layout_constraintBottom_toBottomOf="@+id/editName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.071"
@@ -61,8 +61,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Pantheon:"
-        android:textSize="@dimen/textSize"
         android:textColor="@color/fontColor"
+        android:textSize="@dimen/textSize"
         app:layout_constraintBottom_toBottomOf="@+id/editPantheon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.084"
@@ -77,14 +77,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:hint="                        "
-        android:textSize="@dimen/editTextSize"
         android:textColor="#FFFFFF"
+        android:textSize="@dimen/editTextSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.72"
         app:layout_constraintStart_toEndOf="@+id/noun"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintVertical_bias="0.045" />
 
     <EditText
         android:id="@+id/editName"
@@ -95,14 +95,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:hint="                        "
-        android:textSize="@dimen/editTextSize"
         android:textColor="#FFFFFF"
+        android:textSize="@dimen/editTextSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toEndOf="@+id/name"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintVertical_bias="0.159" />
 
     <EditText
         android:id="@+id/editPantheon"
@@ -113,14 +113,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:hint="                        "
-        android:textSize="@dimen/editTextSize"
         android:textColor="#FFFFFF"
+        android:textSize="@dimen/editTextSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toEndOf="@+id/pantheon"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.254" />
+        app:layout_constraintVertical_bias="0.269" />
 
     <EditText
         android:id="@+id/editAdjective"
@@ -131,14 +131,32 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:hint="                        "
-        android:textSize="@dimen/editTextSize"
         android:textColor="#FFFFFF"
+        android:textSize="@dimen/editTextSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toEndOf="@+id/adjective"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.364" />
+        app:layout_constraintVertical_bias="0.373" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:entries="@array/story_array"
+        android:prompt="@string/storyP"
+
+
+        />
 
     <Button
         android:id="@+id/sendInfo"
@@ -148,15 +166,15 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="sendInfo"
         android:text="Send Info"
-        android:textSize="@dimen/textSize"
         android:textColor="#FFFFFF"
+        android:textSize="@dimen/textSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519"
-        android:onClick="sendInfo"/>
+        app:layout_constraintVertical_bias="0.622" />
 
 </android.support.constraint.ConstraintLayout>
