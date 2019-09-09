@@ -4,19 +4,44 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static String story;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Spinner spin = findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.my_spinner);
-        spin.setAdapter(adapter);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // https://developer.android.com/guide/topics/ui/controls/spinner#java
+
+        Spinner spin = findViewById(R.id.spinner1);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.story_array, R.layout.my_spinner);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin.setAdapter(adapter);
+
+        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                story = parent.getItemAtPosition(position).toString();
+                //Spinner spin1 = (Spinner) findViewById(R.id.spinner1);
+                //String selected = spin1.getSelectedItem().toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
+
+    public static String getStory(){
+        return story;
     }
 
     public void sendInfo(View v){

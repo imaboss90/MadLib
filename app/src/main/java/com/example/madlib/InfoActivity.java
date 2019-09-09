@@ -3,6 +3,8 @@ package com.example.madlib;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class InfoActivity extends AppCompatActivity {
@@ -12,7 +14,8 @@ public class InfoActivity extends AppCompatActivity {
     public static final String MY_ADJ = "adjective";
     public static final String MY_PANTH = "pantheon";
 
-
+    MainActivity obj = new MainActivity();
+    public String story = MainActivity.getStory();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +32,37 @@ public class InfoActivity extends AppCompatActivity {
         String myAdj = intent.getStringExtra(MY_ADJ);
         String myPantheon = intent.getStringExtra(MY_PANTH);
 
-        String strToDisplay = "My name is " + myName + " and I am the greatest immortal being to ever"
-                + " walk this earth!" + " I am of the " + myPantheon + " pantheon, one that has been " +
-                "ruling throughout time itself. " + "When I went to go meet Zeus the other day, he wanted to give me" +
-                " a " + myAdj + " " + myNoun + ". It was by far my favorite gift I have ever received and wish to" +
-                " give it to all.";
-        TextView str = (TextView) findViewById(R.id.info);
-        str.setText(strToDisplay);
+        if(story.equalsIgnoreCase("Story 1")) {
+            String strToDisplay = "My name is " + myName + " and I am the greatest immortal being to ever"
+                    + " walk this earth!" + " I am of the " + myPantheon + " pantheon, one that has been " +
+                    "ruling throughout time itself. " + "When I went to go meet Zeus the other day, he wanted to give me" +
+                    " a " + myAdj + " " + myNoun + ". It was by far my favorite gift I have ever received and wish to" +
+                    " give it to all." + story;
+            TextView str = (TextView) findViewById(R.id.info);
+            str.setText(strToDisplay);
+        }
+
+        if(story.equalsIgnoreCase("Story 2")) {
+            String strToDisplay = "My name is " + myName + " and I am the greatest immortal being to ever"
+                    + " walk this pluto!" + " I am of the " + myPantheon + " pantheon, one that has been " +
+                    "ruling throughout time itself. " + "When I went to go meet Zeus the other day, he wanted to give me" +
+                    " a " + myAdj + " " + myNoun + ". It was by far my favorite gift I have ever received and wish to" +
+                    " give it to all." + story;
+            TextView str = (TextView) findViewById(R.id.info);
+            str.setText(strToDisplay);
+        }
+
+        if(story.equalsIgnoreCase("Story 3")) {
+            String strToDisplay = "My name is " + myName + " and I am the greatest immortal being to ever"
+                    + " walk this mars!" + " I am of the " + myPantheon + " pantheon, one that has been " +
+                    "ruling throughout time itself. " + "When I went to go meet Zeus the other day, he wanted to give me" +
+                    " a " + myAdj + " " + myNoun + ". It was by far my favorite gift I have ever received and wish to" +
+                    " give it to all." + story;
+            TextView str = (TextView) findViewById(R.id.info);
+            str.setText(strToDisplay);
+        }
+
+
+
     }
 }

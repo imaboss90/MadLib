@@ -2,5 +2,6 @@
 <resources>
     <dimen name="textSize"> 30sp </dimen>
     <dimen name="editTextSize">30sp </dimen>
+    <dimen name="buttonText">20sp</dimen>
 
 </resources>
